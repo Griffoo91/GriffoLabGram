@@ -35,7 +35,11 @@ const SignupForm = () => {
     //create user
     const newUser = await createUserAccount(values);
 
-    console.log(newUser);
+    if(!newUser){
+      return;
+    }
+
+    // const session = await signInAccount()
   }
   return (
     <Form {...form}>
